@@ -50,7 +50,7 @@
 //                 altura: 1234,
 //                 localidad: "Nuñez"}
 
-let cadena = 'Hola Mundo' 
+// let cadena = 'Hola Mundo' 
 
 // length --- contar la cantidad de caracteres 
 // toUpperCase --- convierte a mausculas 
@@ -61,10 +61,24 @@ let cadena = 'Hola Mundo'
 // trim --- corta los espacios al inicio y final 
 // concat --- concatena 
 
-let nombre = prompt ('ingrese su nonbre').trim().toLocaleUpperCase()
-console.log(nombre);
+// let nombre = prompt ('ingrese su nonbre').trim().toLocaleUpperCase()
+// console.log(nombre);
 
-
+/* 
+alt + shift + A --- COMENTARIO MULTINIVEL
+*/ 
  
+// DEFINICION D EUNA VARIABLE 
+// let numero = 5; 
+// console.log(numero);
+// let numero2 = 6;
+// console.log(numero2);
+// numero2 = numero;
+// console.log(numero2);
 
+// ESCRIBIR EN EL DOCUMENTO JAVASCRIPT
+
+// document.write('Hola Mundo fede ') 
+
+// alert('hola mundo')
 
