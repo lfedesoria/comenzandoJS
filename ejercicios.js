@@ -230,7 +230,7 @@ do {
 let numero = +prompt ('ingrese un numero')
 let cadenaNumero = ''
 
-while (numero !== ) {
+while (numero !== null ) {
   
 }
 
