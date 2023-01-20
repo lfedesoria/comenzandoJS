@@ -97,6 +97,14 @@ console.log(mostrarHeroe());
 
 // FUNCION ANONIMA: SE DECLARAN COMO CONSTANTES
 
-const square = function () {
+const square = function (num) {
+  return Math.pow(num,2); // potencia matematica
 }
 
+console.log(square(2));
+
+let sumaSquare = (num1, num2) => {
+  return square(num1) + square (num2)
+}
+
+console.log(sumaSquare(2,5));
