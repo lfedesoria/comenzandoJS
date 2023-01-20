@@ -154,7 +154,7 @@ MOSTRAR POR CONSOLA POR CADA UN UN SALUDO DE BIENVENIDA
 
 console.log(revertirPalabra('palabra')); 
 
-// metodo filter 
+// FILTER
 // es mutable: modifica el array oroginal 
 
 let pares = numeros.filter((num)=>{
@@ -163,3 +163,86 @@ let pares = numeros.filter((num)=>{
 
 console.log(pares);
 
+let mayor10 = numeros.filter((num) => num > 10)
+
+console.log(mayor10);
+
+// FIND 
+// DEVUELVE EL PRIMER ELELEMENTO QUE CUMPLE CON LA CONDICION O UNDEFINED
+
+let alumnos = ['juan', 'pedro', 'carla', 'pablo', 'maria']
+
+let resultadoBusqueda = alumnos.find(alumnos => alumnos === 'juan')
+
+console.log(resultadoBusqueda);
+
+// MAP (metodo inmutable)
+// DEVUELVE UN NUEVO ARREGLO CON LOS RESULTADOS DE APLICAR UN LLAMADO A LA FUNCION (CALLBACK)
+// A CADA UNO DE LOS ELEMENTOS DEL ARRAY 
+// ¡¡¡ SIRVE PARA HACER UNA COPIA DEL ORIGINAL !!!
+
+let numerosDobles = numeros.map (num => num *2)
+// array original 
+console.log(numeros);
+// nuevo array mapeado
+console.log(numerosDobles);
+
+let alumnosCopia = alumnos.map(alumnos => alumnos)
+
+console.log(alumnos);
+console.log(alumnosCopia);
+
+// FOREACH
+// NO MUTA EL ARREGLO ORIGINAL Y NO GENERA UN NUEVO ARREGLO 
+// SI QUIERO GUARDAR/COPIAR UN NUEVO ARRAY USO MAP, SI NO USO FOREACH   
+ 
+alumnos.forEach((alumno) => {
+    let nombreMayus = alumno.toUpperCase();
+    console.log(`Los nombres en mayuscula ${nombreMayus}`)
+})
+
+// EJERCICIO: FILTRAR DE UN ARREGLO DE PERSONAS LOS NOMBRES QUE CONTENGAN LA LETRA 'M'
+
+let personas = ['Joaquin','Abel','Mariano','Emmanuel','Mirta','Ambar','Horacio']
+
+let nombresFiltrados = (letra) => {
+    let nombres = personas.filter(nombres => nombres.toUpperCase().includes(letra.toUpperCase()))
+    return nombres
+}
+
+console.log(nombresFiltrados('m'));
+
+// con este ejemplo vemos como aplicar un buscador 
+// trim() metodo de String que elimina espacios vacios al inicio y al final de la cadena de caracteres 
+
+// REDUCE 
+// METODO QUE ME DEVUELVE UN VALOR RESULTADO DE APLICAR A CADA ELEMENTO UN CALLBACK 
+
+let numbers = [1,2,5,6]
+let sum = numbers.reduce((resultado, actual)=> {
+    return resultado + actual
+})
+console.log(sum);
+
+// encontrar elementos unicos con reduce
+
+const array = ["🐈", 1, 2, "🐈", "🐈", 3, 4]
+
+const array2 = [1,2,3,5,2,1]
+
+// se puede clonar el array usando spread oparator 
+
+console.log(...array2, 118);
+
+let uniqueArray = array.reduce(
+    (unique, item) =>(unique.includes(item) ? unique : [...unique, item]),
+    []
+  );
+
+  console.log(uniqueArray); 
+
+// ENCONTRAR UNICOS CON FILTER 
+
+let uniqueArray4 = array.filter((item, index) => array.indexOf(item) === index); 
+
+console.log(uniqueArray4);
